@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Tinos');
+.about-image {
+    height: 150px;
+    width: 150px;
+    display: block;
+}
+.about-container {
+    background-size: cover;
+    min-height: 100vh;
+    width: 100vw;
+    padding-top: 50px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.about-content {
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+}
+.about-content-text {
+    font-family: Tinos, serif;
+    font-size: 1.2em;
+}
+.about-content-title {
+    font-family: Lobster, cursive;
+    font-size: 2em;
+    color: black;
+}
+.about-info-container {
+    font-family: Tinos, serif;
+    color: black;
+    font-size: 2em;
+    text-align: left;
+}
+.bold {
+    font-weight: bold;
+}
+@media (min-width: 768px) {
+    .about-content {
+        width: 75%;
+        border-radius: 15px;
+        font-size: 1vh !important;
+    }
+    .about-container {
+        padding: 50px;
+    }
+    .about-content-text {
+        font-family: Tinos, serif;
+        font-size: 2.5em;
+    }
+    .about-content-title {
+        font-family: Lobster, cursive;
+        font-size: 2.5em;
+        color: black;
+    }
+}

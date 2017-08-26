@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Tinos');
+
+.projects-container {
+    background-size: cover;
+    min-height: 100vh;
+    width: 100vw;
+    padding-top: 50px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.projects-content {
+    text-align: center;
+    font-family: Lobster, cursive;
+}
+.cover,
+.booklet-current-left,
+.booklet-current-right,
+.booklet-next-left,
+.booklet-next-right,
+.booklet-previous-left,
+.booklet-previous-right,
+.booklet-container {
+    height: 22rem !important;
+}
