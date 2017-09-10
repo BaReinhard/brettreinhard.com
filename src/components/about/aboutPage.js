@@ -66,13 +66,13 @@ export default class AboutPage extends React.Component {
             <div className="about-container" style={{ background: `url(${home})` }}>
                 <div className="about-content">
                     <div className="about-top">
-                        <div xs={12} md={6}>
+                        <div>
                             <Image
                                 className="about-image"
                                 src={'https://avatars0.githubusercontent.com/u/13072194?v=4&s=460'}
                             />
                         </div>
-                        <div xs={12} md={6}>
+                        <div>
                             <div className="about-info-container">
                                 <p align="left">
                                     <span className="bold">Email:</span>Brett@Reinhards.us

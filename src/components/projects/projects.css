@@ -13,7 +13,9 @@
     text-align: center;
     font-family: Lobster, cursive;
 }
-.cover,
+.cover {
+    height: 22.5rem !important;
+}
 .booklet-current-left,
 .booklet-current-right,
 .booklet-next-left,
@@ -22,4 +24,16 @@
 .booklet-previous-right,
 .booklet-container {
     height: 22rem !important;
+}
+.booklet-current-right,
+.booklet-previous-right,
+.booklet-next-right,
+.booklet-current-left,
+.booklet-previous-left,
+.booklet-next-left {
+    overflow: scroll;
+}
+
+.projects-info {
+    font-size: 1.4em;
 }
