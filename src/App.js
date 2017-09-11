@@ -91,6 +91,7 @@ export default class App extends React.Component {
                     <Route exact path={'/'} component={HomePage} />
                     <Route exact path="/projects" component={ProjectsPage} />
                     <Route exact path="/about" component={AboutPageComponent} />
+                    <Route exact path="/brettreinhard.com" component={HomePage} />
                 </div>
             </BrowserRouter>
         );
