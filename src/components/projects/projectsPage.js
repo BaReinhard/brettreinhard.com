@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Booklet from 'booklet-react-component';
 import ProjectDetails from './projectDetails';
+import './project.css';
 import Project from './project';
 import home from '../../img/homberg.jpg';
 import GitMatch from '../../img/gitmatch.png';
@@ -115,7 +116,7 @@ let projects = [
             <div>
                 <p style={{ fontStyle: 'italic', color: 'black' }}>Open the Console to See Output when clicking item</p>
                 <AutoComplete
-                    style={{ color: 'black' }}
+                    style={{ color: 'black', position: 'relative', width: '350px' }}
                     dropdownStyle={{ backgroundColor: 'grey' }}
                     valuesStyle={{ color: 'black' }}
                     values={[
@@ -266,9 +267,34 @@ export default class ProjectsPage extends React.Component {
             <div className="projects-container" style={{ background: `url(${home})` }}>
                 {/* Begin Mobile View*/}
                 {this.state.mobile ? (
-                    <div>
-                        <ul>{projects.map(proj => <li>{proj.description}</li>)}</ul>
-                    </div>
+                    projects.map(project => {
+                        return (
+                            <div
+                                style={{
+                                    borderStyle: 'box-border',
+                                    padding: '5px',
+                                    backgroundColor: 'rgba(255,255,255,0.8)',
+                                }}
+                            >
+                                <Project
+                                    title={project.title}
+                                    image={project.image}
+                                    technology={project.technology}
+                                    info={{ title: project.title, url: project.url }}
+                                />
+                                <ProjectDetails
+                                    info={{ title: project.title, url: project.url }}
+                                    content={{
+                                        description: project.description,
+                                        techDetails: project.techDetails,
+                                        why: project.why,
+                                    }}
+                                    technology={project.technology}
+                                    example={project.example}
+                                />
+                            </div>
+                        );
+                    })
                 ) : (
                     /* End Mobile View */
                     /* Begin Desktop View */

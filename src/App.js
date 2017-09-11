@@ -7,6 +7,7 @@ import AboutPageComponent from './components/about/aboutPage';
 import { LinkContainer, IndexLinkContainer } from 'react-router-bootstrap';
 import { Navbar, Nav, Image, NavItem } from 'react-bootstrap';
 import { BrowserRouter, Route } from 'react-router-dom';
+import Waypoint from 'react-waypoint';
 
 export default class App extends React.Component {
     constructor(props) {
@@ -15,6 +16,21 @@ export default class App extends React.Component {
             displayNav: false,
         };
     }
+    componentDidMount() {
+        if (document.body.scrollTop !== 0) {
+            this.refs.nav.classList.add('nav-scrolled');
+        }
+    }
+    addBackgroundColor = () => {
+        if (!this.refs.nav.classList.contains('nav-scrolled')) {
+            this.refs.nav.classList.add('nav-scrolled');
+        }
+    };
+    removeBackgroundColor = () => {
+        if (this.refs.nav.classList.contains('nav-scrolled')) {
+            this.refs.nav.classList.remove('nav-scrolled');
+        }
+    };
     displayNav = () => {
         this.setState({ displayNav: !this.state.displayNav });
     };
@@ -26,11 +42,15 @@ export default class App extends React.Component {
     render() {
         return (
             <BrowserRouter>
-                <div style={{ backgroundColor: 'rgba(0,0,0,0)' }}>
+                <div>
+                    <Waypoint onLeave={this.addBackgroundColor} onEnter={this.removeBackgroundColor} />
                     <button
+                        ref="nav"
                         className="nav-button"
                         onClick={this.displayNav}
                         style={{
+                            width: '100%',
+                            textAlign: 'left',
                             all: 'none',
                             fontFamily: 'Dancing Script, cursive',
                             position: 'fixed',

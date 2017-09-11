@@ -6,6 +6,16 @@ body {
     font-family: sans-serif;
 }
 html {
+    transition: opacity 2s;
+}
+.nav-scrolled {
+    transition: background-color 2s;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+.nav-button {
+    transition: background-color 2s;
+}
+html {
     font-size: 25px !important;
 }
 /* NavBar */

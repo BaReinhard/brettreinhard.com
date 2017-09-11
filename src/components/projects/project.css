@@ -2,7 +2,13 @@ p {
     font-size: 1.4em;
 }
 h2,
-h3 {
+h3,
+h4 {
     font-family: 'Lobster', cursive !important;
     color: black !important;
+}
+
+.autocomplete-input,
+.valuedisplay-container {
+    width: 350px !important;
 }

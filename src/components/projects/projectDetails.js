@@ -4,17 +4,17 @@ import './project.css';
 
 const ProjectDetailsPage = props => {
     return (
-        <div style={{ height: '100%', overflow: 'scroll' }}>
-            <div style={{ overflow: 'scroll' }}>
-                <h4>Description:</h4>
+        <div>
+            <div>
+                <h3>Description:</h3>
                 <p>{props.content.description}</p>
-                <h4>Technical Details:</h4>
+                <h3>Technical Details:</h3>
                 <p>{props.content.techDetails}</p>
-                <h4>Why?: </h4>
+                <h3>Why?: </h3>
                 <p>{props.content.why}</p>
                 {props.example !== null ? (
                     <div>
-                        <h4>Example: </h4>
+                        <h3>Example: </h3>
                         {props.example}
                     </div>
                 ) : (

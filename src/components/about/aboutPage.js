@@ -75,7 +75,8 @@ export default class AboutPage extends React.Component {
                         <div>
                             <div className="about-info-container">
                                 <p align="left">
-                                    <span className="bold">Email:</span>Brett@Reinhards.us
+                                    <span className="bold">Email:</span>
+                                    <span style={{ overflowWrap: 'break-word' }}>Brett@Reinhards.us</span>
                                 </p>
                             </div>
                         </div>
