@@ -20,7 +20,7 @@
     },
     "scripts": {
         "deploy":
-            "npm run build&&gh-pages -d build&&git add *&&git commit -m \"Added new features\"&&git push&&git checkout gh-pages&&sudo rm -R ../bareinhard.github.io/* &&cp -R * ../bareinhard.github.io/ && cd ../bareinhard.github.io &&git add * && git commit -m \"Update WebPage\"&&git push&&cd ../brett.reinhard.com&&git checkout master",
+            "npm run build&&gh-pages -d build&&git checkout gh-pages&&sudo rm -R ../bareinhard.github.io/* &&cp -R * ../bareinhard.github.io/ && cd ../bareinhard.github.io &&git add * && git commit -m \"Update WebPage\"&&git push&&cd ../brett.reinhard.com&&git checkout master",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test --env=jsdom",
