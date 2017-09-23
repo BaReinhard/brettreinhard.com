@@ -2,7 +2,7 @@
     "name": "brettreinhard.com",
     "version": "0.1.0",
     "private": true,
-    "homepage": "http://brettreinhard.com/brettreinhard.com",
+    "homepage": "http://brettreinhard.com/",
     "dependencies": {
         "autocomplete-react-component": "0.0.16",
         "booklet-react-component": "0.0.10",
@@ -20,7 +20,7 @@
     },
     "scripts": {
         "deploy":
-            "npm run build&&gh-pages -d build&&git checkout gh-pages&&sudo rm -R ../bareinhard.github.io/* &&cp -R * ../bareinhard.github.io/ && cd ../bareinhard.github.io &&git add * && git commit -m \"Update WebPage\"&&git push&&cd ../brett.reinhard.com&&git checkout master",
+            "sudo npm run build&&gh-pages -d build&&sudo git checkout gh-pages&&sudo rm -R ../bareinhard.github.io/* &&sudo cp -R * ../bareinhard.github.io/ &&sudo cd ../bareinhard.github.io &&sudo git add * &&sudo git commit -m \"Update WebPage\"&&git push&&sudo cd ../brett.reinhard.com&&sudo git checkout master",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test --env=jsdom",

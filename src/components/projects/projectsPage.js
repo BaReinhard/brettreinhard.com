@@ -249,6 +249,7 @@ export default class ProjectsPage extends React.Component {
     }
     componentDidMount() {
         window.addEventListener('resize', this.updateDimensions);
+        window.scrollTo(0, 0);
     }
     componentWillUnmount() {
         window.removeEventListener('resize', this.updateDimensions);
@@ -275,8 +276,6 @@ export default class ProjectsPage extends React.Component {
         });
     }
     genPrevPages() {
-        document.getElementsByClassName('booklet-current-right').scrollTop = 0;
-
         let leftButtonDisabled = false,
             rightButtonDisabled = false;
         // Handle Left Button Being Disabled
@@ -323,6 +322,7 @@ export default class ProjectsPage extends React.Component {
                         projects.map(project => {
                             return (
                                 <div
+                                    className="projects-container"
                                     style={{
                                         borderStyle: 'box-border',
                                         padding: '5px',
@@ -352,7 +352,7 @@ export default class ProjectsPage extends React.Component {
                     ) : (
                         /* End Mobile View */
                         /* Begin Desktop View */
-                        <div style={{ fontFamily: 'Tinos, serif' }} className="projects-content">
+                        <div style={{ fontFamily: 'Tinos, serif' }} className="projects-content projects-container">
                             <h2>Projects</h2>
                             <button
                                 className="prev-button"

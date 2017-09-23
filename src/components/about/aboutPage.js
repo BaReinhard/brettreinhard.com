@@ -58,6 +58,9 @@ export default class AboutPage extends React.Component {
             nextTitle: false,
         };
     }
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
     aboutComplete = () => {
         this.setState({
             displayContent: true,
