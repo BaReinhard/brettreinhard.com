@@ -1,5 +1,5 @@
 p {
-    font-size: 1.4em;
+    font-size: 1.6em;
 }
 h2,
 h3,
@@ -11,4 +11,10 @@ h4 {
 .autocomplete-input,
 .valuedisplay-container {
     width: 350px !important;
+}
+@media (max-width: 1100px) {
+    .next-button,
+    .prev-button {
+        top: 5% !important;
+    }
 }

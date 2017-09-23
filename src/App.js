@@ -6,9 +6,8 @@ import { Modal } from 'react-bootstrap';
 import AboutPageComponent from './components/about/aboutPage';
 import { LinkContainer, IndexLinkContainer } from 'react-router-bootstrap';
 import { Navbar, Nav, Image, NavItem } from 'react-bootstrap';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
 import Waypoint from 'react-waypoint';
-
 export default class App extends React.Component {
     constructor(props) {
         super(props);
@@ -66,6 +65,7 @@ export default class App extends React.Component {
                         className="Sidebar left"
                         show={this.state.displayNav}
                         onHide={this.onHide}
+                        style={{ zIndex: 20000 }}
                         autoFocus
                         keyboard
                     >
@@ -88,10 +88,14 @@ export default class App extends React.Component {
                         </Modal.Body>
                     </Modal>
 
-                    <Route exact path={'/'} component={HomePage} />
-                    <Route exact path="/projects" component={ProjectsPage} />
-                    <Route exact path="/about" component={AboutPageComponent} />
-                    <Route exact path="/brettreinhard.com" component={HomePage} />
+                    <Switch>
+                        <Route exact path={'/'} component={HomePage} />
+                        <Route path="/projects" component={ProjectsPage} />
+                        <Route path="/about" component={AboutPageComponent} />
+                        <Route path="/brettreinhard.com" component={HomePage} />
+                        <Route path="/404" component={HomePage} />
+                        <Redirect path="*" to="/404" />
+                    </Switch>
                 </div>
             </BrowserRouter>
         );

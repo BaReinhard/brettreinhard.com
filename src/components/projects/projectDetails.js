@@ -4,7 +4,7 @@ import './project.css';
 
 const ProjectDetailsPage = props => {
     return (
-        <div>
+        <div className="project-details-render" style={{ fontFamily: 'Tinos, serif' }}>
             <div>
                 <h3>Description:</h3>
                 <p>{props.content.description}</p>
