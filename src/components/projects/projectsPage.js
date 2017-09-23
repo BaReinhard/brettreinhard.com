@@ -258,6 +258,7 @@ export default class ProjectsPage extends React.Component {
     genNextPages() {
         // Scroll the page back to the top when the next page gets rendered to the current page
         document.getElementsByClassName('booklet-current-right')[0].scrollTop = 0;
+        document.getElementsByClassName('booklet-next-right')[0].scrollTop = 0;
 
         let leftButtonDisabled = false,
             rightButtonDisabled = false;
