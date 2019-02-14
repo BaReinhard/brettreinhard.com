@@ -6,7 +6,7 @@
   "dependencies": {
     "autocomplete-react-component": "0.0.16",
     "booklet-react-component": "0.0.10",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.0",
     "font-awesome": "^4.7.0",
     "react": "^15.6.1",
     "react-addons-css-transition-group": "^15.6.0",
