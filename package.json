@@ -16,16 +16,20 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
     "react-waypoint": "^7.1.0",
-    "typed-react-component": "0.0.4"
+    "typed-react-component": "0.0.4",
+    "snyk": "^1.316.1"
   },
   "scripts": {
     "deploy": "sudo chown -R brett *&&sudo git add *&&sudo git commit -m \"Updated Site\"&&sudo git push&&sudo git checkout gh-pages&&sudo git pull&&sudo chown -R brett ../bareinhard.github.io&&sudo rm -R ../bareinhard.github.io/* &&sudo cp -R * ../bareinhard.github.io/ &&sudo cd ../bareinhard.github.io &&sudo git add * &&sudo git commit -m \"Update WebPage\"&&git push&&sudo cd ../brett.reinhard.com&&sudo git checkout master",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "devDependencies": {
     "gh-pages": "^1.0.0"
-  }
+  },
+  "snyk": true
 }
